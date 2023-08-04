@@ -15,8 +15,6 @@ export default async function GalleryPage() {
     .max_results(30)
     .execute()) as { resources: SearchResult[] };
 
-  console.log("results", results);
-
   return (
     <section>
       <div className="flex flex-col gap-8">
