@@ -28,12 +28,18 @@ export function ImageMenu({ image }: { image: SearchResult }) {
             <AddToAlbumDialog image={image} onClose={() => setOpen(false)} />
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
-            <Link
-              href={`/edit?publicId=${encodeURIComponent(image.public_id)}`}
+            <Button
+              className="cursor-pointer flex justify-start pl-4"
+              asChild
+              variant="ghost"
             >
-              <Pencil className="mr-2 w-4 h-4" />
-              Edit
-            </Link>
+              <Link
+                href={`/edit?publicId=${encodeURIComponent(image.public_id)}`}
+              >
+                <Pencil className="mr-2 w-4 h-4" />
+                Edit
+              </Link>
+            </Button>
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>

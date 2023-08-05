@@ -14,7 +14,7 @@ export default function UploadButton() {
         onUpload={(result: UploadResult) => {
           setTimeout(() => {
             router.refresh();
-          }, 1000);
+          }, 2000);
         }}
         uploadPreset="giomsr4s"
       >
